@@ -16,3 +16,4 @@ For this project we took the top 10 accounts on Instagram and create a rank base
 
 #### **Modules used**:
 * Random &rarr; Used to generate the challenger instagram account.
+* Os &rarr; Used to clear the console after selecting the last option.
