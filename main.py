@@ -14,7 +14,9 @@ SCORE = 0
 ERROR = 0
 
 
+
 def random_account_choice(random_number):
+    '''Choose a random account from the data list base on the index given.'''
     name = data[random_number]["name"]
     description = data[random_number]["description"]
     country = data[random_number]["country"]
@@ -23,6 +25,7 @@ def random_account_choice(random_number):
     return [name,description,country, followers]
 
 def who_wins(celebrity1, celebrity2, guess):
+    '''Compare followers from celebrity1 with celebrity2 based on the selected guess.'''
     conversor = 1    
     if guess == 'b':
         conversor *= -1
@@ -43,12 +46,13 @@ os.system('cls')
 
 print(art.logo)
 
-print(f"Compare A: {first_celebrity_name}, a {first_celebrity_description}, from {first_celebrity_country}")
+print(f"Score: {SCORE}")
+
+print(f"\nCompare A: {first_celebrity_name}, a {first_celebrity_description}, from {first_celebrity_country}")
 
 
 # MAIN PROGRAM
-while ERROR < 1:
-    ERROR = 0    
+while ERROR < 1:  
 
     print(art.vs)
     
@@ -86,8 +90,10 @@ while ERROR < 1:
         os.system('cls')
         
         print(art.logo)
+
+        print(f"Score: {SCORE}")
         
-        print(f"Compare A: {first_celebrity_name}, a {first_celebrity_description}, from {first_celebrity_country}")
+        print(f"\nCompare A: {first_celebrity_name}, a {first_celebrity_description}, from {first_celebrity_country}")
     else: 
         os.system('cls')
         print(f"Sorry, that's wrong. Final score: {SCORE}")
